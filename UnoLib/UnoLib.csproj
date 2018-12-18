@@ -21,7 +21,4 @@
   <ItemGroup>
     <UpToDateCheckInput Remove="View1.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NetStdLibrary1\NetStdLibrary1.csproj" />
-  </ItemGroup>
 </Project>

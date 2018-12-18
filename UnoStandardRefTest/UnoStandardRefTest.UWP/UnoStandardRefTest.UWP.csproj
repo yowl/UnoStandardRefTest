@@ -94,10 +94,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\..\NetStdLibrary1\NetStdLibrary1.csproj">
-      <Project>{b6b0f4f5-269b-42dc-a09a-babb3e870465}</Project>
-      <Name>NetStdLibrary1</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\UnoLib\UnoLib.csproj">
       <Project>{3b02ff83-ed49-43e7-b094-a5b12c30a61e}</Project>
       <Name>UnoLib</Name>

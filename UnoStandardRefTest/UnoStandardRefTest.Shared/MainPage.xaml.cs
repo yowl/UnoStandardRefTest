@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using NetStdLibrary1;
 using UnoLib;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -28,7 +27,7 @@ namespace UnoStandardRefTest
         {
             this.InitializeComponent();
             var x = new Class1();
-            var y = new NetStdClass();
+//            var y = new NetStdClass();
         }
     }
 }
