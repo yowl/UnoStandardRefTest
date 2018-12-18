@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NetStdLibrary1;
 using System.Runtime.CompilerServices;
 
 namespace UnoLib
@@ -11,7 +10,7 @@ namespace UnoLib
     {
         public Class1()
         {
-            var x = new NetStdClass();
+//            var x = new NetStdClass();
             IAsyncStateMachine i;
 
         }

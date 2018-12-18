@@ -12,12 +12,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using NetStdLibrary1;
 using UnoLib;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace UnoStandardRefTest
+namespace NoUno
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -28,7 +27,6 @@ namespace UnoStandardRefTest
         {
             this.InitializeComponent();
             var x = new Class1();
-//            var y = new NetStdClass();
         }
     }
 }
