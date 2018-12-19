@@ -16,9 +16,11 @@
     <UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="HStyles.xaml" />
     <None Remove="View1.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <UpToDateCheckInput Remove="HStyles.xaml" />
     <UpToDateCheckInput Remove="View1.xaml" />
   </ItemGroup>
 </Project>

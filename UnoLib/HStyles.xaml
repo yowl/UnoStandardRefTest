@@ -1,0 +1,9 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="using:System">
+
+
+    <System:String x:Key="shortDateFormatString">{0:d}</System:String>
+
+</ResourceDictionary>
