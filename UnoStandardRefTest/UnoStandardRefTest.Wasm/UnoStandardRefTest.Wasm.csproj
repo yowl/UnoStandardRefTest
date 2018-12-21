@@ -30,11 +30,12 @@
     <Content Include="LinkerConfig.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="1.42.0" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.58" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
+    <PackageReference Include="Uno.UI" Version="1.43.0-dev.564" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.131" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NetStdLibrary1\NetStdLibrary1.csproj" />
     <ProjectReference Include="..\..\UnoLib\UnoLib.csproj" />
   </ItemGroup>
   <Import Project="..\UnoStandardRefTest.Shared\UnoStandardRefTest.Shared.projitems" Label="Shared" Condition="Exists('..\UnoStandardRefTest.Shared\UnoStandardRefTest.Shared.projitems')" />

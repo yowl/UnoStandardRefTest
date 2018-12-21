@@ -4,6 +4,5 @@
     xmlns:System="using:System">
 
 
-    <System:String x:Key="shortDateFormatString">{0:d}</System:String>
-
+    <x:String x:Key="shortDateFormatString">{0:d}</x:String>
 </ResourceDictionary>

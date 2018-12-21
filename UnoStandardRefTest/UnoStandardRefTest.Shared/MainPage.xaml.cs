@@ -26,8 +26,7 @@ namespace UnoStandardRefTest
         public MainPage()
         {
             this.InitializeComponent();
-            var x = new Class1();
-//            var y = new NetStdClass();
+            navigationView.IsBackButtonVisible = NavigationViewBackButtonVisible.Visible;
         }
     }
 }

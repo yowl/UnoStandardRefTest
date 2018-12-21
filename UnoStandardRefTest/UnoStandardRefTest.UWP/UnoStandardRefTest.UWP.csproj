@@ -2,6 +2,12 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console">
+      <Version>1.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Filter">
+      <Version>1.1.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.3</Version>
     </PackageReference>
@@ -16,8 +22,8 @@
     <AssemblyName>UnoStandardRefTest</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -110,6 +116,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging.abstractions\1.1.1\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Filter">
+      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging.filter\1.1.2\lib\netstandard1.1\Microsoft.Extensions.Logging.Filter.dll</HintPath>
+    </Reference>
+    <Reference Include="Uno.Core">
+      <HintPath>..\..\..\..\..\.nuget\packages\uno.core\1.25.0\lib\netstandard2.0\Uno.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="..\UnoStandardRefTest.Shared\UnoStandardRefTest.Shared.projitems" Label="Shared" Condition="Exists('..\UnoStandardRefTest.Shared\UnoStandardRefTest.Shared.projitems')" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

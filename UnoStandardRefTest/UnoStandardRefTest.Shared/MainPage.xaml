@@ -6,8 +6,34 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="navViewHeader">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button >Login</Button>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<TextBlock Text="Hello, world !" Margin="20" FontSize="30" />
-    </Grid>
+    <!-- <ContentControl> -->
+    <!--     <ContentControl.Template> -->
+    <!--         <ControlTemplate > -->
+    <!--             <Grid> -->
+    <!--                 <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/> -->
+    <!--                 <Grid Visibility="Collapsed" x:Name="dialogGrid" > -->
+    <!--                     <Grid Opacity="0.5" Background="White"/> -->
+    <!--                     <Border BorderBrush="DarkGray" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" BorderThickness="2"> -->
+    <!--                          -->
+    <!--                     </Border> -->
+    <!--                 </Grid> -->
+    <!--             </Grid> -->
+    <!--         </ControlTemplate> -->
+    <!--     </ContentControl.Template> -->
+        <NavigationView x:Name="navigationView" AlwaysShowHeader="True" HeaderTemplate="{StaticResource navViewHeader}" >
+                <NavigationView.MenuItems>
+                    <NavigationViewItem  Content="Reports" Tag="SamplePage1" />
+                    <NavigationViewItem  Content="Menu Item2" Tag="SamplePage2" />
+                </NavigationView.MenuItems>
+                <Frame x:Name="contentFrame"/>
+        </NavigationView>
+    <!-- </ContentControl> -->
 </Page>

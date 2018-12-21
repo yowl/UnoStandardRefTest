@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Extensions.Logging;
+using Uno.Extensions;
 
 namespace UnoStandardRefTest
 {
@@ -28,6 +30,9 @@ namespace UnoStandardRefTest
         /// </summary>
         public App()
         {
+#if DEBUG
+//            ConfigureFilters(LogExtensionPoint.AmbientLoggerFactory);
+#endif
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -79,6 +84,42 @@ namespace UnoStandardRefTest
             }
         }
 
+        static void ConfigureFilters(ILoggerFactory factory)
+        {
+            factory
+               .WithFilter(new FilterLoggerSettings
+                           {
+                               { "Uno", LogLevel.Warning },
+                               { "Windows", LogLevel.Warning },
+						
+                               // Generic Xaml events
+                               //{ "Windows.UI.Xaml", LogLevel.Debug },
+                               // { "Windows.UI.Xaml.Shapes", LogLevel.Debug },
+                               //{ "Windows.UI.Xaml.VisualStateGroup", LogLevel.Debug },
+                               //{ "Windows.UI.Xaml.StateTriggerBase", LogLevel.Debug },
+                               // { "Windows.UI.Xaml.UIElement", LogLevel.Debug },
+                               // { "Windows.UI.Xaml.Setter", LogLevel.Debug },
+						   
+                               // Layouter specific messages
+                               // { "Windows.UI.Xaml.Controls", LogLevel.Debug },
+                               //{ "Windows.UI.Xaml.Controls.Layouter", LogLevel.Debug },
+                               //{ "Windows.UI.Xaml.Controls.Panel", LogLevel.Debug },
+						   
+                               // Binding related messages
+                               // { "Windows.UI.Xaml.Data", LogLevel.Debug },
+                               // { "Windows.UI.Xaml.Data", LogLevel.Debug },
+						   
+                               //  Binder memory references tracking
+                               // { "ReferenceHolder", LogLevel.Debug },
+                           }
+                )
+#if DEBUG
+               .AddConsole(LogLevel.Trace);
+#else
+				.AddConsole(LogLevel.Debug);
+#endif
+        }
+
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>
@@ -86,6 +127,7 @@ namespace UnoStandardRefTest
         /// <param name="e">Details about the navigation failure</param>
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
+            Console.WriteLine(e.Exception);
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
 
