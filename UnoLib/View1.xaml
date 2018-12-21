@@ -7,4 +7,29 @@
     mc:Ignorable="d"
              x:Name="root">
 
+    <UserControl.Resources>
+        <DataTemplate x:Key="dataTemplate">
+            <Button Tag="{Binding Key}" Margin="5" Height="50" Width="250">
+                <Button.Content>
+                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap"/>
+                </Button.Content>
+            </Button>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Click="Load" >Load</Button>
+
+        <ListView ItemsSource="{Binding Reports}" ItemTemplate="{StaticResource dataTemplate}"
+                  Grid.Column="1">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+    </Grid>
 </UserControl>

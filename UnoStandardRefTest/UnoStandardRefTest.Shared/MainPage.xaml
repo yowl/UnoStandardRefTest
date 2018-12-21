@@ -5,6 +5,7 @@
     xmlns:local="using:UnoStandardRefTest"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:unoLib="using:UnoLib"
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="navViewHeader">
@@ -28,12 +29,13 @@
     <!--             </Grid> -->
     <!--         </ControlTemplate> -->
     <!--     </ContentControl.Template> -->
-        <NavigationView x:Name="navigationView" AlwaysShowHeader="True" HeaderTemplate="{StaticResource navViewHeader}" >
-                <NavigationView.MenuItems>
-                    <NavigationViewItem  Content="Reports" Tag="SamplePage1" />
-                    <NavigationViewItem  Content="Menu Item2" Tag="SamplePage2" />
-                </NavigationView.MenuItems>
-                <Frame x:Name="contentFrame"/>
-        </NavigationView>
+    <unoLib:View1></unoLib:View1>
+        <!-- <NavigationView x:Name="navigationView" AlwaysShowHeader="True" HeaderTemplate="{StaticResource navViewHeader}" ItemInvoked="NavigationView_OnItemInvoked" > -->
+        <!--         <NavigationView.MenuItems> -->
+        <!--             <NavigationViewItem  Content="Reports" Tag="SamplePage1" /> -->
+        <!--             <NavigationViewItem  Content="Menu Item2" Tag="SamplePage2" /> -->
+        <!--         </NavigationView.MenuItems> -->
+        <!--         <Frame x:Name="contentFrame"/> -->
+        <!-- </NavigationView> -->
     <!-- </ContentControl> -->
 </Page>
