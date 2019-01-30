@@ -6,6 +6,7 @@
     <WasmHead>true</WasmHead>
     <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
     <NoWarn>NU1701</NoWarn>
+    <WasmShellILLinkerEnabled>false</WasmShellILLinkerEnabled>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="..\UnoStandardRefTest.UWP\Assets\*.png" Link="Assets\%(FileName)%(Extension)" />
@@ -32,8 +33,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
-    <PackageReference Include="Uno.UI" Version="1.43.0-dev.564" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.131" />
+    <PackageReference Include="Uno.UI" Version="1.43.0-dev.744" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.159" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\UnoLib\UnoLib.csproj" />

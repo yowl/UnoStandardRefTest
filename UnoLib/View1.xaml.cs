@@ -9,26 +9,37 @@ namespace UnoLib
 {
     public partial class View1
     {
-        ViewModel vm = new ViewModel();
         public View1()
         {
+            Reports = new List<ReportEntity>
+                      {
+                          new ReportEntity
+                          {
+                              ItemsView =  new List<string> {"a", "b"}
+                          }
+
+                      };
+            DataContext = this;
             InitializeComponent();
-            DataContext = vm;
         }
 
-        private void Load(object sender, RoutedEventArgs e)
+        IEnumerable<ReportEntity> reports;
+
+        public IEnumerable<ReportEntity> Reports
         {
-            vm.Reports = new List<ReportEntity>
-                         {
-                             new ReportEntity
-                             {
-                                 Key = 1, Name="a"
-                             },
-                             new ReportEntity
-                             {
-                             Key = 2, Name="b"
-                         }
-                         };
+            get => reports;
+            set
+            {
+                if (reports != value)
+                {
+                    reports = value;
+                }
+            }
         }
+    }
+
+    public class ReportEntity
+    {
+        public List<string> ItemsView { get; set; }
     }
 }

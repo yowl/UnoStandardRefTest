@@ -7,13 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:unoLib="using:UnoLib"
     mc:Ignorable="d">
-    <Page.Resources>
-        <DataTemplate x:Key="navViewHeader">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button >Login</Button>
-            </StackPanel>
-        </DataTemplate>
-    </Page.Resources>
 
     <!-- <ContentControl> -->
     <!--     <ContentControl.Template> -->

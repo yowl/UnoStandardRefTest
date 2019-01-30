@@ -4,32 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                              xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
              x:Name="root">
 
-    <UserControl.Resources>
-        <DataTemplate x:Key="dataTemplate">
-            <Button Tag="{Binding Key}" Margin="5" Height="50" Width="250">
-                <Button.Content>
-                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap"/>
-                </Button.Content>
-            </Button>
-        </DataTemplate>
-    </UserControl.Resources>
     <Grid x:Name="LayoutRoot">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Button Click="Load" >Load</Button>
-
-        <ListView ItemsSource="{Binding Reports}" ItemTemplate="{StaticResource dataTemplate}"
-                  Grid.Column="1">
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-        </ListView>
+        <Grid.Resources>
+            <DataTemplate x:Key="dataTemplate">
+                <TextBlock Text="dfdf"/>
+<!--                 <ComboBox ItemsSource="{Binding ItemsView}"/> -->
+            </DataTemplate>
+        </Grid.Resources>
+<ItemsControl x:Name="lst" ItemsSource="{Binding Reports}" ItemTemplate="{StaticResource dataTemplate}"> 
+         </ItemsControl> 
     </Grid>
 </UserControl>
