@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Data;
 
 namespace UnoLib
 {
+    [Bindable]
     public partial class View1
     {
         public View1()
@@ -38,6 +40,7 @@ namespace UnoLib
         }
     }
 
+    [Bindable]
     public class ReportEntity
     {
         public List<string> ItemsView { get; set; }
