@@ -10,7 +10,7 @@
     <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='xamarinios10' or '$(TargetFramework)'=='monoandroid80' or '$(TargetFramework)'=='netstandard2.0'">
-    <PackageReference Include="Uno.UI" Version="1.43.0-dev.744" />
+    <PackageReference Include="Uno.UI" Version="1.43.0-dev.746" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls" Version="3.1.0-build.68.g1c44fa8ae7" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'uap10.0.16299'">

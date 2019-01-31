@@ -33,7 +33,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
-    <PackageReference Include="Uno.UI" Version="1.43.0-dev.744" />
+    <PackageReference Include="Uno.UI" Version="1.43.0-dev.746" />
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.159" />
   </ItemGroup>
   <ItemGroup>

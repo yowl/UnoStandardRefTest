@@ -9,13 +9,6 @@
              x:Name="root">
 
     <Grid x:Name="LayoutRoot">
-        <Grid.Resources>
-            <DataTemplate x:Key="dataTemplate">
-                <TextBlock Text="dfdf"/>
-<!--                 <ComboBox ItemsSource="{Binding ItemsView}"/> -->
-            </DataTemplate>
-        </Grid.Resources>
-<ItemsControl x:Name="lst" ItemsSource="{Binding Reports}" ItemTemplate="{StaticResource dataTemplate}"> 
-         </ItemsControl> 
+        <ComboBox DisplayMemberPath="Name" SelectedValuePath="Value" ItemsSource="{Binding Reports}"/>
     </Grid>
 </UserControl>

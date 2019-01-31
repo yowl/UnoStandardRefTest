@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Xaml;
+﻿using System.Collections.Generic;
 using Windows.UI.Xaml.Data;
 
 namespace UnoLib
@@ -17,8 +12,14 @@ namespace UnoLib
                       {
                           new ReportEntity
                           {
-                              ItemsView =  new List<string> {"a", "b"}
-                          }
+                              Name="aa",
+                              Value = 1
+                          },
+                          new ReportEntity
+                          {
+                              Name="bb",
+                          Value = 2,
+                      }
 
                       };
             DataContext = this;
@@ -43,6 +44,8 @@ namespace UnoLib
     [Bindable]
     public class ReportEntity
     {
-        public List<string> ItemsView { get; set; }
+        public string Name { get; set; }
+        public int Value { get; set; }
+        //        public List<string> ItemsView { get; set; }
     }
 }
