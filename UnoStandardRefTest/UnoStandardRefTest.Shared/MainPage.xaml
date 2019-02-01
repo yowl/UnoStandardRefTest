@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:unoLib="using:UnoLib"
     mc:Ignorable="d">
-
+    <StackPanel>
+        <Button Click="ButtonBase_OnClick">Open dialog</Button>
+        <StackPanel x:Name="dialogHolder"></StackPanel>
+    </StackPanel>
     <!-- <ContentControl> -->
     <!--     <ContentControl.Template> -->
     <!--         <ControlTemplate > -->
@@ -22,7 +25,6 @@
     <!--             </Grid> -->
     <!--         </ControlTemplate> -->
     <!--     </ContentControl.Template> -->
-    <unoLib:View1></unoLib:View1>
         <!-- <NavigationView x:Name="navigationView" AlwaysShowHeader="True" HeaderTemplate="{StaticResource navViewHeader}" ItemInvoked="NavigationView_OnItemInvoked" > -->
         <!--         <NavigationView.MenuItems> -->
         <!--             <NavigationViewItem  Content="Reports" Tag="SamplePage1" /> -->

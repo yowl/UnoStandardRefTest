@@ -27,5 +27,13 @@ namespace UnoStandardRefTest
         {
             this.InitializeComponent();
         }
+
+        void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            var v = new View1();
+            dialogHolder.Children.Add(v);
+            v.DataContext = new View1ViewModel();
+            v.ViewModel = (View1ViewModel) v.DataContext;
+        }
     }
 }
