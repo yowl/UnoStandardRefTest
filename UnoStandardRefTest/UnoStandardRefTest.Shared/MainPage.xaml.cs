@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,12 +26,15 @@ namespace UnoStandardRefTest
     {
         public MainPage()
         {
+            var s = new Stopwatch();
+            Items = Enumerable.Range(0, 2000).Select(i => i.ToString()).ToList();
             this.InitializeComponent();
+            s.Start();
+            DataContext = this;
+            textBlock.Text = s.Elapsed.ToString("G");
         }
 
-        void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            view1.DataContext = new View1ViewModel();
-        }
+
+        public List<string> Items { get; set; }
     }
 }

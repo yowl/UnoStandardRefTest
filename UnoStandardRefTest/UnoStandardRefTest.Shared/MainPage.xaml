@@ -8,8 +8,7 @@
     xmlns:unoLib="using:UnoLib"
     mc:Ignorable="d">
     <StackPanel>
-        <Button Click="ButtonBase_OnClick">Bind</Button>
-
-        <unoLib:View1 x:Name="view1"/>
+        <TextBlock x:Name="textBlock"/>
+        <ComboBox ItemsSource="{Binding Items}"></ComboBox>
     </StackPanel>
 </Page>
