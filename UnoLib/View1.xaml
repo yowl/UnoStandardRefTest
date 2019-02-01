@@ -9,137 +9,21 @@
     mc:Ignorable="d"
              x:Name="root">
 
-    <Grid x:Name="LayoutRoot">
-        <Grid.Resources>
-            <DataTemplate x:Key="intTemplate"  >
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="{Binding Prompt}" Width="300"/>
-<!--                     <tsc:MaskedNumericInput Value="{Binding Value, Mode=TwoWay}" MinWidth="250" Style="{StaticResource colValue}"/> -->
-                    <!--      <tkc:RadMaskedNumericInput Value="{Binding Value, Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}" Style="{StaticResource colValue}"  -->
-                    <!-- AutoFillZeros="False" MinWidth="250" Mask="" FormatString="#,#" IsClearButtonVisible="False" -->
-                    <!--                                 maskedInput:MaskedInputExtensions.Maximum="2147483647"/> -->
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="stringTemplate">
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="{Binding Prompt}" Width="300"/>
-                    <!--      <TextBox Text="{Binding Value, Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}" Style="{StaticResource colValue}"  -->
-                    <!-- MinWidth="250"/> -->
-                    <TextBox Text="{Binding Value, Mode=TwoWay}" Style="{StaticResource colValue}" 
-                         MinWidth="250"/>
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="dateTemplate">
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="{Binding Prompt}" Width="300"/>
-                    <!-- <tsc:HseDatePicker Date="{Binding Value, Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}" Style="{StaticResource colValue}" -->
-<!--                     <datePickerResetTest:HseDatePicker SelectedValue="{Binding Value, Mode=TwoWay}" Style="{StaticResource colValue}" -->
-<!--                 				   MinWidth="250"/> -->
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="comboTemplate">
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="{Binding Prompt}" Width="300"/>
-                    <!-- <tsc:DeleteableComboBox SelectedValue="{Binding Value, Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}" -->
-                    <!--
-                -->
-                    <ComboBox
-                                       DisplayMemberPath="{Binding DisplayMember}"
-                                       SelectedValuePath="{Binding ValueMember}"
-                                       ItemsSource="{Binding ItemsView.Source}"
-                                       SelectedValue="{Binding Value, Mode=TwoWay}"
-                                       unoLib:ReferenceBinding.ReferencePath="{Binding ItemsSource}" 
-                        MinWidth="250">
-                        <!--                                        DropDownOpened="ComboBox_OnDropDownOpened" -->
-                        <!--                 					   referenceData:ReferenceBinding.ParamHolders="{Binding ItemsSource, ElementName=t}" -->
-                        <!--                                        referenceData:ReferenceBinding.Behavior="{Binding Behavior}" -->
-                        <!-- <ComboBox.ItemsPanel> -->
-                        <!-- 	<ItemsPanelTemplate> -->
-                        <!-- 		<VirtualizingStackPanel Width="250"/> -->
-                        <!-- 	</ItemsPanelTemplate> -->
-                        <!-- </ComboBox.ItemsPanel> -->
-                    </ComboBox>
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="comboStandardTemplate">
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="{Binding Prompt}" Width="300"/>
-                    <!-- <tsc:DeletableComboBox SelectedValue="{Binding Value, Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}" -->
-                    <ComboBox SelectedValue="{Binding Value, Mode=TwoWay}"
-                DisplayMemberPath="{Binding DisplayMember}"
-                SelectedValuePath="{Binding ValueMember}"
-                                           ItemsSource="{Binding ItemsView}"
-                Style="{StaticResource colValue}" MinWidth="250">
-                        <!-- <ComboBox.ItemsPanel> -->
-                        <!--     <ItemsPanelTemplate> -->
-                        <!--         <VirtualizingStackPanel Width="250"/> -->
-                        <!--     </ItemsPanelTemplate> -->
-                        <!-- </ComboBox.ItemsPanel> -->
-                    </ComboBox>
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="multiSelectComboTemplate">
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="{Binding Prompt}" Width="300"/>
-                    <!--         <checkableCombo:MultiSelectComboBox SelectedItems="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=Explicit}" -->
-                    <!-- ReferenceData:ReferenceBinding.ReferencePath="{Binding ItemsSource}"  -->
-                    <!-- ReferenceData:ReferenceBinding.ParamHolders="{Binding ItemsSource,  -->
-                    <!--                             RelativeSource={RelativeSource FindAncestor, AncestorType=ItemsControl}}"  -->
-                    <!-- ReferenceData:ReferenceBinding.Behavior="{Binding Behavior}"  -->
-                    <!-- SelectedValuePath="{Binding ValueMember}" -->
-                    <!--                            ItemsSource="{Binding ItemsView.View}" -->
-                    <!--                                         DisplayBindingPath="{Binding DisplayMember}" -->
-                    <!-- Style="{StaticResource colValue}" MinWidth="250"> -->
-                    <!--             <tkc:RadComboBox.ItemsPanel> -->
-                    <!--                 <ItemsPanelTemplate> -->
-                    <!--                     <VirtualizingStackPanel Width="250"/> -->
-                    <!--                 </ItemsPanelTemplate> -->
-                    <!--             </tkc:RadComboBox.ItemsPanel> -->
-                    <!--         </checkableCombo:MultiSelectComboBox> -->
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="multiSelectStandardComboTemplate">
-                <StackPanel Orientation="Horizontal" Visibility="{Binding Path=Visible, Converter={StaticResource cnvBoolToVisibility}}">
-                    <TextBlock  Text="{Binding Prompt}" Width="300"/>
-                    <!--    <checkableCombo:MultiSelectComboBox SelectedItems="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=Explicit}" -->
-                    <!--                                     SelectedValuePath="{Binding ValueMember}" -->
-                    <!--                                     ItemsSource="{Binding ItemsView.View}" -->
-                    <!--                                     DisplayBindingPath="{Binding DisplayMember}" -->
-                    <!--                                     Style="{StaticResource colValue}" MinWidth="250"> -->
-                    <!--     <tkc:RadComboBox.ItemsPanel> -->
-                    <!--         <ItemsPanelTemplate> -->
-                    <!--             <VirtualizingStackPanel Width="250"/> -->
-                    <!--         </ItemsPanelTemplate> -->
-                    <!--     </tkc:RadComboBox.ItemsPanel> -->
-                    <!-- </checkableCombo:MultiSelectComboBox> -->
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="boolTemplate">
-                <StackPanel Orientation="Horizontal" Visibility="{Binding Path=Visible, Converter={StaticResource cnvBoolToVisibility}}">
-                    <TextBlock  Text="{Binding Prompt}" Width="300"/>
-                    <CheckBox VerticalAlignment="Center"  IsChecked="{Binding Value, Mode=TwoWay}"  />
-                </StackPanel>
-            </DataTemplate>
-            <DataTemplate x:Key="dataTemplate">
-                <ComboBox ItemsSource="{Binding ItemsView}" DisplayMemberPath="{Binding DisplayName}" SelectedValuePath="{Binding ValueName}"/> 
-            </DataTemplate>
-            <unoLib:ParameterTemplateSelector DateHolder="{StaticResource dateTemplate}"
-                                              ComboHolder="{StaticResource comboTemplate}"
-                                              MultiSelectComboHolder="{StaticResource multiSelectComboTemplate}"
-                                              MultiSelectStandardComboHolder="{StaticResource multiSelectStandardComboTemplate}"
-                                              StringHolder="{StaticResource stringTemplate}"
-                                              IntHolder="{StaticResource intTemplate}"
-                                              ComboStandardHolder="{StaticResource comboStandardTemplate}"
-                                              BoolHolder="{StaticResource boolTemplate}"  x:Key="parameterSelector">
-            </unoLib:ParameterTemplateSelector>
-        </Grid.Resources>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Button Content="Simulate Load" Click="ButtonBase_OnClick"></Button>
-        <ItemsControl  Grid.Column="1"  x:Name="lst" ItemsSource="{Binding ReportParameters}" ItemTemplateSelector="{StaticResource parameterSelector}"> 
-        </ItemsControl> 
-    </Grid>
+    <StackPanel x:Name="LayoutRoot">
+        <ItemsControl  x:Name="lst" ItemsSource="{Binding ReportParameters}" >
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:Key="comboTemplate">
+                    <StackPanel Orientation="Horizontal" >
+                        <ComboBox
+                            DisplayMemberPath="{Binding DisplayMember}"
+                            SelectedValuePath="{Binding ValueMember}"
+                            ItemsSource="{Binding ItemsView.Source}"
+                            unoLib:ReferenceBinding.ReferencePath="{Binding ItemsSource}" 
+                            MinWidth="250">
+                        </ComboBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
 </UserControl>

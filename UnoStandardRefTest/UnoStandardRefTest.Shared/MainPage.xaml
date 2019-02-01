@@ -8,29 +8,8 @@
     xmlns:unoLib="using:UnoLib"
     mc:Ignorable="d">
     <StackPanel>
-        <Button Click="ButtonBase_OnClick">Open dialog</Button>
-        <StackPanel x:Name="dialogHolder"></StackPanel>
+        <Button Click="ButtonBase_OnClick">Bind</Button>
+
+        <unoLib:View1 x:Name="view1"/>
     </StackPanel>
-    <!-- <ContentControl> -->
-    <!--     <ContentControl.Template> -->
-    <!--         <ControlTemplate > -->
-    <!--             <Grid> -->
-    <!--                 <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/> -->
-    <!--                 <Grid Visibility="Collapsed" x:Name="dialogGrid" > -->
-    <!--                     <Grid Opacity="0.5" Background="White"/> -->
-    <!--                     <Border BorderBrush="DarkGray" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" BorderThickness="2"> -->
-    <!--                          -->
-    <!--                     </Border> -->
-    <!--                 </Grid> -->
-    <!--             </Grid> -->
-    <!--         </ControlTemplate> -->
-    <!--     </ContentControl.Template> -->
-        <!-- <NavigationView x:Name="navigationView" AlwaysShowHeader="True" HeaderTemplate="{StaticResource navViewHeader}" ItemInvoked="NavigationView_OnItemInvoked" > -->
-        <!--         <NavigationView.MenuItems> -->
-        <!--             <NavigationViewItem  Content="Reports" Tag="SamplePage1" /> -->
-        <!--             <NavigationViewItem  Content="Menu Item2" Tag="SamplePage2" /> -->
-        <!--         </NavigationView.MenuItems> -->
-        <!--         <Frame x:Name="contentFrame"/> -->
-        <!-- </NavigationView> -->
-    <!-- </ContentControl> -->
 </Page>

@@ -9,6 +9,13 @@ namespace UnoLib
     [Windows.UI.Xaml.Data.Bindable]
     public class View1ViewModel : INotifyPropertyChanged
     {
+        public View1ViewModel()
+        {
+            CreateItemSourceItems();
+        }
+
+        public ReportParameterHolder FirstItem => ReportParameters[0];
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public virtual void OnPropertyChanged(PropertyChangedEventArgs e)
@@ -25,12 +32,6 @@ namespace UnoLib
                               DisplayMember = "Name",
                               ValueMember = "Key",
                               ItemsSource="Source1",
-                          },
-                          new ReportParameterHolder
-                          {
-                              DisplayMember = "Name",
-                              ValueMember = "Key",
-                              ItemsSource="Source2",
                           },
                       };
         }

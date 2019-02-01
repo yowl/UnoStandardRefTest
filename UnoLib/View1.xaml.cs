@@ -16,14 +16,7 @@ namespace UnoLib
         {
             InitializeComponent();
         }
-
-        public View1ViewModel ViewModel { get; set; }
-
-        void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            ViewModel.CreateItemSourceItems();
-        }
-    }
+   }
 
     [Windows.UI.Xaml.Data.Bindable]
     public class ReportParameterHolder : INotifyPropertyChanged
