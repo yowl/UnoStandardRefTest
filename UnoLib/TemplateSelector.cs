@@ -13,21 +13,22 @@ namespace UnoLib
         protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
         {
             var element = container as FrameworkElement;
+            return ComboHolder;
 
-            if (element != null && item != null && item is ReportEntity)
-            {
-                var holder = item as ReportEntity;
-//                if (holder.MultiValue) return holder.ItemsSource != null && holder.ItemsSource.Contains("{") ? MultiSelectStandardComboHolder : MultiSelectComboHolder;
-                return ComboHolder;
-//                if (!string.IsNullOrEmpty(holder.ItemsSource))
-//                {
-//                    return holder.ItemsSource.Contains("{") ? ComboStandardHolder : ComboHolder;
-//                }
-//                if (holder.ParameterType == HseParameterType.Boolean) return BoolHolder;
-//                if (holder.ParameterType == HseParameterType.Integer) return IntHolder;
-//                if (holder.ParameterType == HseParameterType.DateTime) return DateHolder;
-                return StringHolder;
-            }
+//            if (element != null && item != null && item is ReportEntity)
+//            {
+//                var holder = item as ReportEntity;
+////                if (holder.MultiValue) return holder.ItemsSource != null && holder.ItemsSource.Contains("{") ? MultiSelectStandardComboHolder : MultiSelectComboHolder;
+//                return ComboHolder;
+////                if (!string.IsNullOrEmpty(holder.ItemsSource))
+////                {
+////                    return holder.ItemsSource.Contains("{") ? ComboStandardHolder : ComboHolder;
+////                }
+////                if (holder.ParameterType == HseParameterType.Boolean) return BoolHolder;
+////                if (holder.ParameterType == HseParameterType.Integer) return IntHolder;
+////                if (holder.ParameterType == HseParameterType.DateTime) return DateHolder;
+//                return StringHolder;
+//            }
 
             return null;
         }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace UnoLib
 {
-    [Bindable]
+    [Windows.UI.Xaml.Data.Bindable]
     public class View1ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

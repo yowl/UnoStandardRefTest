@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 //using System.ComponentModel;
 using System.Linq;
 using System.Windows;
@@ -19,11 +20,12 @@ namespace UnoLib
 
         static void ReferencePathChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
+            Debug.WriteLine("ReferencePathChanged " + $" old {e.OldValue} and new {e.NewValue}");
             var path = e.NewValue as string;
             var combo = d as ComboBox;
             if (path != null && combo != null)
             {
-                var paramHolder = combo.DataContext as ReportEntity;
+                var paramHolder = combo.DataContext as ReportParameterHolder;
                 if (paramHolder != null)
                 {
                     paramHolder.ItemsView = new CollectionViewSource
