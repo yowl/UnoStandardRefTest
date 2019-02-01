@@ -25,9 +25,12 @@ namespace UnoStandardRefTest
     {
         public MainPage()
         {
+            cvs = new CollectionViewSource();
+            cvs.Source = new List<string> {"s"};
+            DataContext = this;
             this.InitializeComponent();
-            var x = new Class1();
-//            var y = new NetStdClass();
         }
+
+        public CollectionViewSource cvs { get; set; }
     }
 }

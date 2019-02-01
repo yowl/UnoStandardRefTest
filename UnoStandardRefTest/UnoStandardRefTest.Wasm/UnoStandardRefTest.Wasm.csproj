@@ -31,10 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Uno.UI" Version="1.42.0" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.58" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.157" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NetStdLibrary1\NetStdLibrary1.csproj" />
     <ProjectReference Include="..\..\UnoLib\UnoLib.csproj" />
   </ItemGroup>
   <Import Project="..\UnoStandardRefTest.Shared\UnoStandardRefTest.Shared.projitems" Label="Shared" Condition="Exists('..\UnoStandardRefTest.Shared\UnoStandardRefTest.Shared.projitems')" />
