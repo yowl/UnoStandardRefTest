@@ -11,9 +11,9 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using UnoLib;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,12 +26,22 @@ namespace UnoStandardRefTest
     {
         public MainPage()
         {
-            var s = new Stopwatch();
-            Items = Enumerable.Range(0, 2000).Select(i => i.ToString()).ToList();
-            this.InitializeComponent();
-            s.Start();
-            DataContext = this;
-            textBlock.Text = s.Elapsed.ToString("G");
+            try
+            {
+                XamlReader.Load(@"<ResourceDictionary
+    xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation"" 
+    xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml"">
+    
+    <Style TargetType=""TextBlock"" x:Key=""DefaultColumnStyle"">
+    </Style>
+    
+</ResourceDictionary>
+");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
 
 
