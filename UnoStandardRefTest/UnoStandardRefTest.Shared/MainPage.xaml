@@ -5,10 +5,19 @@
     xmlns:local="using:UnoStandardRefTest"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:unoLib="using:UnoLib"
     mc:Ignorable="d">
-    <StackPanel>
-        <TextBlock x:Name="textBlock"/>
-        <ComboBox ItemsSource="{Binding Items}"></ComboBox>
-    </StackPanel>
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Telerik Samples" Margin="20" FontSize="30" />
+            <ScrollViewer >
+                <ScrollViewer.TopHeader>
+                    <TextBlock Text="Header"/>
+                </ScrollViewer.TopHeader>
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TextBlock x:Name="textBlock"/>
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>
+        <!-- <ComboBox ItemsSource="{Binding Items}"></ComboBox> -->
+    </Grid>
 </Page>

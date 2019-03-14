@@ -28,15 +28,15 @@ namespace UnoStandardRefTest
         {
             try
             {
-                XamlReader.Load(@"<ResourceDictionary
-    xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation"" 
-    xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml"">
-    
-    <Style TargetType=""TextBlock"" x:Key=""DefaultColumnStyle"">
-    </Style>
-    
-</ResourceDictionary>
-");
+//                XamlReader.Load(@"<ResourceDictionary
+//    xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation"" 
+//    xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml"">
+//    
+//    <Style TargetType=""TextBlock"" x:Key=""DefaultColumnStyle"">
+//    </Style>
+//    
+//</ResourceDictionary>
+//");
             }
             catch (Exception e)
             {

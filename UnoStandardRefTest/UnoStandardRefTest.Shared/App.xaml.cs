@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.Extensions.Logging;
-using Uno.Extensions;
+//using Uno.Extensions;
 
 namespace UnoStandardRefTest
 {
